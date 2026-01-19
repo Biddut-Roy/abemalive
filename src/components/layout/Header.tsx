@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, Search, User, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,12 +26,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <a href="/" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-lg flex items-center justify-center font-bold text-black text-xl transition-transform group-hover:scale-105">
                 A
               </div>
               <span className="text-2xl font-bold tracking-tight">ABEMA</span>
-            </a>
+            </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
